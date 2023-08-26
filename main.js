@@ -15,10 +15,12 @@ colorButton.addEventListener('click', () => {
     colorName.innerHTML = `rgb(${a},${b},${c})`
     colorName.style.visibility = 'visible'
     copyButton.style.visibility = 'visible'
+    copyButton.innerHTML = 'Copy'
 })
 
 // Function for Copy Color
 copyButton.addEventListener('click', () => {
     const copyColor = colorName.innerHTML
     const av = navigator.clipboard.writeText(copyColor+';')
+    copyButton.innerHTML = "Copied!"
 })
